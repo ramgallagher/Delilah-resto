@@ -19,7 +19,12 @@ const checkToken = (req, res, next) => {
         return res.json({ error: 'Token expired' });
     }
 
+
     req.userId = payload.userId;
+    req.hasRole = payload.hasrole;
+
+    console.log(payload);
+
 
 
     next();
@@ -27,8 +32,8 @@ const checkToken = (req, res, next) => {
 
 
 const hasRole = (req, res, next) => {
-    const user = req.body;
-    if (user.role == 'admin') {
+
+    if (req.hasRole == 'admin') {
         return next();
     } else
         res.sendStatus(403);

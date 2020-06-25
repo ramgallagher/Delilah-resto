@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const ProductsModel = require('./models/products');
 const UserModel = require('./models/users');
 const OrdersModel = require('./models/orders');
-const RolesModel = require('./models/role');
+// const OrderedProductsModel = require('./models/ordered_products');
 const sequelize = new Sequelize('MdiKEBfMi3', 'MdiKEBfMi3', 'S7DpOe8iXM', {
     host: 'remotemysql.com',
     dialect: 'mysql'
@@ -13,16 +13,18 @@ const sequelize = new Sequelize('MdiKEBfMi3', 'MdiKEBfMi3', 'S7DpOe8iXM', {
 const Products = ProductsModel(sequelize, Sequelize);
 const Users = UserModel(sequelize, Sequelize);
 const Orders = OrdersModel(sequelize, Sequelize);
+// const OrderedProducts = OrderedProductsModel(sequelize, Sequelize);
 // const Roles = RolesModel(sequelize, Sequelize);
 
 
-// //relations between 
+// //relations between orders and users table
 
-// Roles.hasMany(Users, { foreignKey: 'roleId', sourceKey: 'id' });
-// Users.belongsTo(Roles, { foreignKey: 'roleId', sourceKey: 'id' });
+Users.hasMany(Orders);
+Orders.belongsTo(Users);
 
+Products.belongsToMany(Orders, { through: 'orderedProducts', foreignKey: 'productId' });
+Orders.belongsToMany(Products, { through: 'orderedProducts', foreignKey: 'orderId' });
 
-// relacion uno uno usuario rol
 
 
 sequelize.sync({ force: false })
@@ -36,6 +38,7 @@ sequelize.sync({ force: false })
 module.exports = {
     Products,
     Users,
-    Orders
+    Orders,
+    // OrderedProducts
     // Roles
 }

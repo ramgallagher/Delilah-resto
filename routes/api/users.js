@@ -4,6 +4,7 @@ const { Users } = require('../../db');
 const { check, validationResult } = require('express-validator');
 const moment = require('moment');
 const jwt = require('jwt-simple');
+const middleware = require('../middlewares');
 
 router.get('/', async(req, res) => {
     const users = await Users.findAll();
@@ -52,6 +53,7 @@ router.post('/login', async(req, res) => {
 const createToken = (user) => {
     const payload = {
         userId: user.id,
+        hasrole: user.role,
         createdAt: moment().unix(),
         expiredAt: moment().add(10, 'minutes').unix()
 
@@ -59,5 +61,27 @@ const createToken = (user) => {
     return jwt.encode(payload, 'Justin es de Piscis')
 
 }
+
+
+router.put('/:userId', middleware.checkToken, middleware.hasRole, async(req, res) => {
+    await Users.update(req.body, {
+        where: { id: req.params.userId }
+    }).then(() => {
+        res.status(200).json("User modified");
+    }).catch(() => {
+        res.status(400).json("Cannot modify user");
+    })
+
+});
+
+router.delete('/:userId', middleware.checkToken, middleware.hasRole, async(req, res) => {
+    await Users.destroy({
+        where: { id: req.params.userId }
+    }).then(() => {
+        res.status(200).json("User deleted");
+    }).catch(() => {
+        res.status(400).json("Cannot delete user");
+    })
+});
 
 module.exports = router;

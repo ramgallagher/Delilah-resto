@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const middleware = require('./middlewares');
+const middleware = require('../middlewares');
 
 const { Products } = require('../../db');
 
@@ -8,7 +8,7 @@ router.get('/', async(req, res) => {
     res.json(products);
 });
 
-router.post('/', async(req, res) => {
+router.post('/', middleware.checkToken, middleware.hasRole, async(req, res) => {
 
     const product = await Products.create(req.body);
     res.json(product);
@@ -17,15 +17,22 @@ router.post('/', async(req, res) => {
 router.put('/:productId', middleware.checkToken, middleware.hasRole, async(req, res) => {
     await Products.update(req.body, {
         where: { id: req.params.productId }
-    });
-    res.json({ success: 'Product modified' })
+    }).then(() => {
+        res.status(200).json("Product modified");
+    }).catch(() => {
+        res.status(400).json("Cannot modify product");
+    })
 });
 
 router.delete('/:productId', middleware.checkToken, middleware.hasRole, async(req, res) => {
     await Products.destroy({
         where: { id: req.params.productId }
-    });
-    res.json({ success: 'Product deleted' });
+    }).then(() => {
+        res.status(200).json("Product deleted");
+    }).catch(() => {
+        res.status(400).json("Cannot delete product");
+    })
+
 });
 
 
