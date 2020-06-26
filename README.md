@@ -2,7 +2,7 @@
 
 ### Para empezar 🛠️ 🚀
 
-### Instrucciones 📋t
+### Instrucciones 📋
 
 1. _Clonar o descargar el repositorio_
 2. _Entrar en la carpeta raiz y dirigirse a la carpeta 'base de datos' copiar el script del archivo 'DelilahDB'._
