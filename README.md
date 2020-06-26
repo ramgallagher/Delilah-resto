@@ -79,7 +79,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   GET/api/users
   
   _Ejemplo de respuesta de la peticion:_
-  
+  ``` 
  {
         "id": 1,
         "username": "ramiroshka",
@@ -104,6 +104,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
         "createdAt": "2020-06-11T19:52:20.000Z",
         "updatedAt": "2020-06-11T19:52:20.000Z"
     }
+```
 
 ## Eliminar Usuario
 
@@ -111,7 +112,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
     
     DELETE /api/users/id 
     
-    Ejemplo de respuesta de la peticion
+    _Ejemplo de respuesta de la peticion:_
 
 ```
 {
