@@ -78,7 +78,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   
   GET/api/users
   
-  Ejemplo de respuesta de la peticion
+  _Ejemplo de respuesta de la peticion:_
   
  {
         "id": 1,
@@ -104,34 +104,10 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
         "createdAt": "2020-06-11T19:52:20.000Z",
         "updatedAt": "2020-06-11T19:52:20.000Z"
     }
-    
-        
-    
-    
-    ##  Modificar Usuarios:
-    _Para poder realizar modificaciones o borrar usuarios es necesario estar logeado como "admin"._
-    
-    PUT /api/users/id 
-    
-    Ejemplo de la peticion: 
-    
-    {
-      
-        "firstname": "Toribio Fonseca",
-        "lastname": "Gomez",
-        "email": "ramgallagher@gmail.com",
-      
-    }
-    
-    Ejemplo de respuesta de la peticion
 
-{
-     "User modified"
-}
+## Eliminar Usuario
 
-6. Eliminar Usuario
-
- Para poder realizar borrar usuarios es necesario estar logeado como ADMIN.
+ _Para poder realizar borrar usuarios es necesario estar logeado como ADMIN._
     
     DELETE /api/users/id 
     
@@ -140,6 +116,28 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
 ```
 {
      "User deleted"
+}
+```
+
+##  Modificar Usuarios:
+    _Para poder realizar modificaciones o borrar usuarios es necesario estar logeado como "admin"._
+    
+    PUT /api/users/id 
+    
+    _Ejemplo de la peticion:_ 
+    ```
+    {
+      
+        "firstname": "Toribio Fonseca",
+        "lastname": "Gomez",
+        "email": "ramgallagher@gmail.com",
+      
+    }
+    ```
+    _Ejemplo de respuesta de la peticion:_
+```
+{
+     "User modified"
 }
 ```
 ## Crear productos
@@ -160,7 +158,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
 
 GET /api/products
 
- Ejemplo de respuesta de la peticion
+ _Ejemplo de respuesta de la peticion:_
 ```
 {
         "id": 1,
@@ -193,14 +191,14 @@ GET /api/products
 
   PUT api/products/id
   
-  _Ejemplo de la peticion: 
+  _Ejemplo de la peticion:_ 
     ```
    {        
     "product_name": "Big Tasty",
     }
     ```
   
-  _Ejemplo de respuesta de la peticion
+  _Ejemplo de respuesta de la peticion:_
   ```
   { 
   	"Product modified"
@@ -226,7 +224,7 @@ GET /api/products
     "productId": [1,2]
 }
 ```
-_Ejemplo de respuesta de la peticion 
+_Ejemplo de respuesta de la peticion:_ 
 ```
 {
    "Order created"
@@ -236,14 +234,14 @@ _Ejemplo de respuesta de la peticion
 
   PUT api/orders/id
   
-  _Ejemplo de la peticion: 
+  _Ejemplo de la peticion:_ 
    
    ```
    {        
     "status": "Listo",
     }
   ```
-  _Ejemplo de respuesta de la peticion
+  _Ejemplo de respuesta de la peticion:_
   ```
   { 
   	"Order modified"
