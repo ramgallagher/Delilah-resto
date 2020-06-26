@@ -265,5 +265,5 @@ _Ejemplo de la peticion:_
 ## Autor ✒️
 
 # Ramiro Gómez
---
-Muchas gracias! 🎁
+
+### Muchas gracias! 🎁
