@@ -31,6 +31,9 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
  
  Registrar usuario:
  
+ URL: http://localhost:3000/api/users/register
+ 
+ 
  
  {
 	"username":"whiterose",
@@ -41,6 +44,8 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
     "role": "admin"
     "password":"whiteclaudia"
   }
+  
+  Si dejamos el campo "role" vacío se crea por defecto el role "user".
  
  
  
