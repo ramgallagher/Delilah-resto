@@ -32,7 +32,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
  
  ## Registrar usuario con rol "admin":
  
- POST/api/users/register
+ * POST/api/users/register
  
  
  ```
@@ -62,7 +62,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   
   ##  Login de usuario:
   
-  POST/api/users/login
+  * POST/api/users/login
   
   Para iniciar sesion el usuario debera ingresar: 
   ```
@@ -76,7 +76,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   
  ## Mostrar usuarios registrados.
   
-  GET/api/users
+  * GET/api/users
   
   _Ejemplo de respuesta de la peticion:_
   ``` 
@@ -210,7 +210,7 @@ _Ejemplo de respuesta de la peticion:_
   ```
   ##  Eliminar productos
   
-  * DELETE api/products/id
+* DELETE api/products/id
   ```
    {
    "Product deleted"
@@ -218,8 +218,8 @@ _Ejemplo de respuesta de la peticion:_
    ```
    ##  Generar un pedido
    
-*POST /api/orders
-   ```
+* POST /api/orders
+```
    {
     "status": "en preparacion",
     "description": "Cangreburger",
@@ -229,12 +229,15 @@ _Ejemplo de respuesta de la peticion:_
 }
 ```
 _Ejemplo de respuesta de la peticion:_ 
+
 ```
 {
    "Order created"
 }
 ```
-Modificar un pedido
+
+
+## Modificar un pedido
 
 * PUT api/orders/id
   
