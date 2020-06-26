@@ -79,7 +79,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   GET/api/users
   
   Ejemplo de respuesta de la peticion
-  ```
+  
   {
         "id": 1,
         "username": "ramiroshka",
@@ -103,18 +103,6 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
         "role": "admin",
         "createdAt": "2020-06-11T19:52:20.000Z",
         "updatedAt": "2020-06-11T19:52:20.000Z"
-    },
-    {
-        "id": 3,
-        "username": "penelope",
-        "password": "$2a$10$SJCS55B/GfJxHJkQA0alNOxU6pnnWJDqhC2buuPKE34Cb/m9zvRoG",
-        "firstname": "Susana",
-        "lastname": "Gutierrez",
-        "email": "susan.susan@gmail.com",
-        "phone_number": "4683509",
-        "role": "user",
-        "createdAt": "2020-06-25T14:38:49.000Z",
-        "updatedAt": "2020-06-25T14:38:49.000Z"
     }
     ```
     
