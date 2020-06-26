@@ -25,7 +25,7 @@ _Utilizamos el comando npm start_
 ```
 Veremos un mensaje en la consola de la terminal "Server up and running" y tendremos nuestro servidor corriendo en el puerto 3000.
 ```
- ### Probando la API 📋
+### Probando la API 📋
  ```
  Para testear esta API es necesario utilizar alguna herramienta con la cual podremos hacer las peticiones necesarias, en este caso utilizaremos Postman.
  ```
@@ -60,11 +60,11 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   }
   ```
   
-  ##  Login de usuario:
+##  Login de usuario:
   
-  * POST/api/users/login
+* POST/api/users/login
   
-  Para iniciar sesion el usuario debera ingresar: 
+Para iniciar sesion el usuario debera ingresar: 
   ```
   {
   	"email": "ramgallagher@gmail.com",
@@ -72,13 +72,13 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   }
   ```
   
-  Esto nos devolvera un token que debemos pegar en el campo "headers" con la key "user-token".
+_Esto nos devolvera un token que debemos pegar en el campo "headers" con la key "user-token"._
   
- ## Mostrar usuarios registrados.
+## Mostrar usuarios registrados.
   
-  * GET/api/users
+* GET/api/users
   
-  _Ejemplo de respuesta de la peticion:_
+_Ejemplo de respuesta de la peticion:_
   ``` 
  {
         "id": 1,
@@ -195,20 +195,20 @@ _Ejemplo de respuesta de la peticion:_
 
 * PUT api/products/id
   
-  _Ejemplo de la peticion:_ 
+_Ejemplo de la peticion:_ 
     ```
    {        
     "product_name": "Big Tasty",
     }
     ```
   
-  _Ejemplo de respuesta de la peticion:_
+_Ejemplo de respuesta de la peticion:_
   ```
   { 
   	"Product modified"
   }
   ```
-  ##  Eliminar productos
+##  Eliminar productos
   
 * DELETE api/products/id
   ```
@@ -216,7 +216,7 @@ _Ejemplo de respuesta de la peticion:_
    "Product deleted"
    }
    ```
-   ##  Generar un pedido
+##  Generar un pedido
    
 * POST /api/orders
 ```
@@ -253,7 +253,7 @@ _Ejemplo de la peticion:_
   	"Order modified"
   }
   ```
-  ## Eliminar un pedido
+## Eliminar un pedido
   
  * DELETE api/orders/id
   ```
