@@ -121,12 +121,12 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
 ```
 
 ##  Modificar Usuarios:
-    _Para poder realizar modificaciones o borrar usuarios es necesario estar logeado como "admin"._
+    Para poder realizar modificaciones o borrar usuarios es necesario estar logeado como "admin".
     
     PUT /api/users/id 
     
     _Ejemplo de la peticion:_ 
-    ```
+    
     {
       
         "firstname": "Toribio Fonseca",
@@ -134,13 +134,13 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
         "email": "ramgallagher@gmail.com",
       
     }
-    ```
+    
     _Ejemplo de respuesta de la peticion:_
-```
+
 {
      "User modified"
 }
-```
+
 ## Crear productos
     
     POST api/products
