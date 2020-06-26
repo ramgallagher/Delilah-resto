@@ -144,7 +144,7 @@ _Ejemplo de respuesta de la peticion:_
 	"User modified"
 }
  ```
-# Crear productos
+## Crear productos
     
 * POST api/products
  ```   
