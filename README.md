@@ -110,7 +110,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
 
  _Para poder realizar borrar usuarios es necesario estar logeado como ADMIN._
     
-    DELETE /api/users/id 
+* DELETE /api/users/id 
     
     _Ejemplo de respuesta de la peticion:_
 
@@ -125,7 +125,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
 
 Para poder realizar modificaciones o borrar usuarios es necesario estar logeado como "admin".
     
-PUT /api/users/id 
+* PUT /api/users/id 
     
 _Ejemplo de la peticion:_ 
  ```    
@@ -144,11 +144,11 @@ _Ejemplo de respuesta de la peticion:_
 	"User modified"
 }
  ```
-## Crear productos
+# Crear productos
     
-    POST api/products
-   ``` 
-    {
+* POST api/products
+ ```   
+{
     "id": 2,
     "product_name": "Lomito Vegano",
     "product_price": "100",
@@ -160,7 +160,7 @@ _Ejemplo de respuesta de la peticion:_
 
 ##  Mostrar productos
 
-GET /api/products
+* GET /api/products
 
  _Ejemplo de respuesta de la peticion:_
 ```
@@ -193,7 +193,7 @@ GET /api/products
     
 ##  Modificar productos
 
-  PUT api/products/id
+* PUT api/products/id
   
   _Ejemplo de la peticion:_ 
     ```
@@ -210,7 +210,7 @@ GET /api/products
   ```
   ##  Eliminar productos
   
-  DELETE api/products/id
+  * DELETE api/products/id
   ```
    {
    "Product deleted"
@@ -218,7 +218,7 @@ GET /api/products
    ```
    ##  Generar un pedido
    
-   POST /api/orders
+   * POST /api/orders
    ```
    {
     "status": "en preparacion",
@@ -236,11 +236,10 @@ _Ejemplo de respuesta de la peticion:_
 ```
 ## Modificar un pedido
 
-  PUT api/orders/id
+* PUT api/orders/id
   
-  _Ejemplo de la peticion:_ 
-   
-   ```
+_Ejemplo de la peticion:_ 
+      ```
    {        
     "status": "Listo",
     }
@@ -253,7 +252,7 @@ _Ejemplo de respuesta de la peticion:_
   ```
   ## Eliminar un pedido
   
-  DELETE api/orders/id
+ * DELETE api/orders/id
   ```
    {
    "Order deleted"
