@@ -139,12 +139,26 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
      "User deleted"
 }
 ```
+## Crear productos
+    
+    POST api/products
+    
+    {
+    "id": 2,
+    "product_name": "Lomito Vegano",
+    "product_price": "100",
+    "product_photo": "NotLomito.jpg",
+    "updatedAt": "2020-06-26T13:47:45.416Z",
+    "createdAt": "2020-06-26T13:47:45.416Z"
+}
+
+
 ##  Mostrar productos
 
 GET /api/products
 
  Ejemplo de respuesta de la peticion
-```
+
 {
         "id": 1,
         "product_name": "Cheeseburger",
@@ -169,49 +183,38 @@ GET /api/products
         "createdAt": "2020-06-25T14:33:24.000Z",
         "updatedAt": "2020-06-25T14:33:24.000Z"
     }
-    ```
-    8. Crear productos
     
-    POST api/products
-    ```
-    {
-    "id": 2,
-    "product_name": "Lomito Vegano",
-    "product_price": "100",
-    "product_photo": "NotLomito.jpg",
-    "updatedAt": "2020-06-26T13:47:45.416Z",
-    "createdAt": "2020-06-26T13:47:45.416Z"
-}
-```
+    
+    
 ##  Modificar productos
 
   PUT api/products/id
   
   Ejemplo de la peticion: 
-   ``` 
+    
    {        
     "product_name": "Big Tasty",
     }
-    ```
+    
   
   Ejemplo de respuesta de la peticion
-  ```
+  
   { 
   	"Product modified"
   }
-  ```
-  10. Eliminar productos
+  
+  ##  Eliminar productos
   
   DELETE api/products/id
-  ```
+  
    {
    "Product deleted"
    }
-   ```
+   
    ##  Generar un pedido
    
    POST /api/orders
-   ```
+   
    {
     "status": "en preparacion",
     "description": "Cangreburger",
@@ -219,37 +222,37 @@ GET /api/products
     "payment": "cash",
     "productId": [1,2]
 }
-```
+
 Ejemplo de respuesta de la peticion 
-```
+
 {
    "Order created"
 }
-```
+
 12. Modificar un pedido
 
   PUT api/orders/id
   
   Ejemplo de la peticion: 
-   ``` 
+   
    {        
     "status": "Listo",
     }
-  ```
+  
   Ejemplo de respuesta de la peticion
-  ```
+  
   { 
   	"Order modified"
   }
-  ```
+  
   13. Eliminar un pedido
   
   DELETE api/orders/id
-  ```
+  
    {
    "Order deleted"
    }
-```
+
 
 ## Autor ✒️
 
