@@ -218,7 +218,7 @@ _Ejemplo de respuesta de la peticion:_
    ```
    ##  Generar un pedido
    
-   * POST /api/orders
+*POST /api/orders
    ```
    {
     "status": "en preparacion",
@@ -234,18 +234,18 @@ _Ejemplo de respuesta de la peticion:_
    "Order created"
 }
 ```
-## Modificar un pedido
+Modificar un pedido
 
 * PUT api/orders/id
   
 _Ejemplo de la peticion:_ 
-      ```
-   {        
+```
+{        
     "status": "Listo",
     }
-  ```
+```
   _Ejemplo de respuesta de la peticion:_
-  ```
+``` 
   { 
   	"Order modified"
   }
