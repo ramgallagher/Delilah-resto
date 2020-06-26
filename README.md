@@ -2,7 +2,13 @@
 
 ### Para empezar 🛠️ 🚀
 
-_Instalar las dependencias mediante el comando "npm install"_
+### Instrucciones 📋t
+
+1. _Clonar o descargar el repositorio_
+2. _Entrar en la carpeta raiz y dirigirse a la carpeta 'base de datos' copiar el script del archivo 'DelilahDB'._
+3. _Crear la base de datos y ejecutar un motor de base de datos._
+
+4. _Instalar las dependencias mediante el comando "npm install"._
 ```
  {
         "bcryptjs": "^2.4.3",
@@ -23,7 +29,7 @@ _Instalar las dependencias mediante el comando "npm install"_
 
 _Utilizamos el comando npm start_ 
 ```
-Veremos un mensaje en la consola de la terminal "Server up and running" y tendremos nuestro servidor corriendo en el puerto 3000.
+Veremos un mensaje en la consola de la terminal "Server up and running". Ya tendremos nuestro servidor corriendo en el puerto 3000 y conexion con la base de datos creada.
 ```
 ### Probando la API 📋
  ```
