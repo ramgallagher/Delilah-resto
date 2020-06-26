@@ -29,7 +29,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
  Para testear esta API es necesario utilizar alguna herramienta con la cual podremos hacer las peticiones necesarias, en este caso utilizaremos Postman.
  
  
- Registrar usuario:
+ Registrar usuario con rol "admin":
  
  URL: http://localhost:3000/api/users/register
  
@@ -45,7 +45,21 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
     "password":"whiteclaudia"
   }
   
-  Si dejamos el campo "role" vacío se crea por defecto el role "user".
+  
+  Registrar usuario con rol "user":
+  
+  
+ {
+    username":"trenton",
+    "firstname":"Natasha",
+    "lastname": "Romanenko",
+    "email": "nastasha_romanenko@gmail.com",
+    "phone_number": "34523234",
+    "password":"mgs123"
+  }
+  
+  
+  
  
  
  
