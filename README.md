@@ -80,7 +80,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   
   Ejemplo de respuesta de la peticion
   
-  {
+ {
         "id": 1,
         "username": "ramiroshka",
         "password": "$2a$10$0Sx8vye2F2E.GjkEJ7kL0ei6AvtRrF7v3Eaunc.Ysp73HCTRdxNd2",
@@ -104,6 +104,8 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
         "createdAt": "2020-06-11T19:52:20.000Z",
         "updatedAt": "2020-06-11T19:52:20.000Z"
     }
+    
+        
     
     
     ##  Modificar Usuarios:
@@ -134,6 +136,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
     DELETE /api/users/id 
     
     Ejemplo de respuesta de la peticion
+
 ```
 {
      "User deleted"
@@ -142,7 +145,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
 ## Crear productos
     
     POST api/products
-    
+   ``` 
     {
     "id": 2,
     "product_name": "Lomito Vegano",
@@ -151,14 +154,14 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
     "updatedAt": "2020-06-26T13:47:45.416Z",
     "createdAt": "2020-06-26T13:47:45.416Z"
 }
-
+```
 
 ##  Mostrar productos
 
 GET /api/products
 
  Ejemplo de respuesta de la peticion
-
+```
 {
         "id": 1,
         "product_name": "Cheeseburger",
@@ -183,38 +186,38 @@ GET /api/products
         "createdAt": "2020-06-25T14:33:24.000Z",
         "updatedAt": "2020-06-25T14:33:24.000Z"
     }
-    
+   ``` 
     
     
 ##  Modificar productos
 
   PUT api/products/id
   
-  Ejemplo de la peticion: 
-    
+  _Ejemplo de la peticion: 
+    ```
    {        
     "product_name": "Big Tasty",
     }
-    
+    ```
   
-  Ejemplo de respuesta de la peticion
-  
+  _Ejemplo de respuesta de la peticion
+  ```
   { 
   	"Product modified"
   }
-  
+  ```
   ##  Eliminar productos
   
   DELETE api/products/id
-  
+  ```
    {
    "Product deleted"
    }
-   
+   ```
    ##  Generar un pedido
    
    POST /api/orders
-   
+   ```
    {
     "status": "en preparacion",
     "description": "Cangreburger",
@@ -222,59 +225,39 @@ GET /api/products
     "payment": "cash",
     "productId": [1,2]
 }
-
-Ejemplo de respuesta de la peticion 
-
+```
+_Ejemplo de respuesta de la peticion 
+```
 {
    "Order created"
 }
-
-12. Modificar un pedido
+```
+## Modificar un pedido
 
   PUT api/orders/id
   
-  Ejemplo de la peticion: 
+  _Ejemplo de la peticion: 
    
+   ```
    {        
     "status": "Listo",
     }
-  
-  Ejemplo de respuesta de la peticion
-  
+  ```
+  _Ejemplo de respuesta de la peticion
+  ```
   { 
   	"Order modified"
   }
-  
-  13. Eliminar un pedido
+  ```
+  ## Eliminar un pedido
   
   DELETE api/orders/id
-  
+  ```
    {
    "Order deleted"
    }
-
+```
 
 ## Autor ✒️
 
- Ramiro Gómez
-
-
-
-
-    
-
-    
-    
-  
-  
-  
-  
-  
-  
- 
-  
-  
-  
- 
- 
- 
+# Ramiro Gómez
