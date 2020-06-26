@@ -30,7 +30,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
  Para testear esta API es necesario utilizar alguna herramienta con la cual podremos hacer las peticiones necesarias, en este caso utilizaremos Postman.
  ```
  
- 1. Registrar usuario con rol "admin":
+ ## Registrar usuario con rol "admin":
  
  POST/api/users/register
  
@@ -47,7 +47,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   }
   ```
   
-  2. Registrar usuario con rol "user":
+  ## Registrar usuario con rol "user":
   
   ```
  {
@@ -60,7 +60,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   }
   ```
   
-  3. Login de usuario:
+  ##  Login de usuario:
   
   POST/api/users/login
   
@@ -74,7 +74,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
   
   Esto nos devolvera un token que debemos pegar en el campo "headers" con la key "user-token".
   
-  4. Mostrar usuarios registrados.
+ ## Mostrar usuarios registrados.
   
   GET/api/users
   
@@ -104,29 +104,29 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
         "createdAt": "2020-06-11T19:52:20.000Z",
         "updatedAt": "2020-06-11T19:52:20.000Z"
     }
-    ```
     
-    5. Modificar Usuarios:
-    Para poder realizar modificaciones o borrar usuarios es necesario estar logeado como ADMIN.
+    
+    ##  Modificar Usuarios:
+    _Para poder realizar modificaciones o borrar usuarios es necesario estar logeado como "admin"._
     
     PUT /api/users/id 
     
     Ejemplo de la peticion: 
-    ```
+    
     {
-        
+      
         "firstname": "Toribio Fonseca",
         "lastname": "Gomez",
         "email": "ramgallagher@gmail.com",
       
     }
-    ```
+    
     Ejemplo de respuesta de la peticion
-```
+
 {
      "User modified"
 }
-```
+
 6. Eliminar Usuario
 
  Para poder realizar borrar usuarios es necesario estar logeado como ADMIN.
@@ -139,7 +139,7 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
      "User deleted"
 }
 ```
-7. Mostrar productos
+##  Mostrar productos
 
 GET /api/products
 
@@ -183,7 +183,7 @@ GET /api/products
     "createdAt": "2020-06-26T13:47:45.416Z"
 }
 ```
-9. Modificar productos
+##  Modificar productos
 
   PUT api/products/id
   
@@ -208,7 +208,7 @@ GET /api/products
    "Product deleted"
    }
    ```
-   11. Generar un pedido
+   ##  Generar un pedido
    
    POST /api/orders
    ```
