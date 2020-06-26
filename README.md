@@ -31,15 +31,15 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
  
  Registrar usuario con rol "admin":
  
- URL: http://localhost:3000/api/users/register
+ POST/api/users/register
  
  
  
  {
 	"username":"whiterose",
-	"firstname":"Pablo",
+	"firstname":"Ramiro",
   "lastname": "Gomez",
-    "email":"pablogomezxo@gmail.com",
+    "email":"ramgallagher@gmail.com",
     "phone_number": "34523234",
     "role": "admin"
     "password":"whiteclaudia"
@@ -57,6 +57,27 @@ Veremos un mensaje en la consola de la terminal "Server up and running" y tendre
     "phone_number": "34523234",
     "password":"mgs123"
   }
+  
+  
+  Login de usuario:
+  
+  POST/api/users/login
+  
+  Para iniciar sesion el usuario debera ingresar: 
+  
+  {
+  	"email": "ramgallagher@gmail.com",
+  	"password": "whiteclaudia"
+  }
+  
+  
+  Esto nos devolvera un token que debemos pegar en el campo "headers" con la key "user-token".
+  
+  
+  
+  
+  
+ 
   
   
   
