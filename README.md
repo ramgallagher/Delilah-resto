@@ -202,6 +202,7 @@ _Ejemplo de respuesta de la peticion:_
 * PUT api/products/id
   
 _Ejemplo de la peticion:_ 
+
     ```
    {        
     "product_name": "Big Tasty",
